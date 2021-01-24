@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import React, { useEffect } from 'react';
 
-function App() {
+import LogIn from './components/LogIn'
+import { observer, inject } from 'mobx-react'
+import Orders from './components/Orders';
+import MapContainer from './components/MapContainer';
+import Contact from './components/Contact';
+import NavBar from './components/NavBar';
+import Scan from './components/Scan';
+
+function App(props) {
+
+  props.ordersStore.checkLocalStorage()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      {props.ordersStore.islogIn && <NavBar/> }
+      <Route exact path='/' render={() =>props.ordersStore.islogIn ? <Orders/> : <LogIn/>} /> 
+      <Route exact path='/contact' render={() =>props.ordersStore.islogIn ? <Contact/> : <LogIn/>} /> 
+      <Route exact path='/map' render={() =>props.ordersStore.islogIn ? <MapContainer /> : <LogIn/>} />
+      <Route exact path='/Scan' render={() =>props.ordersStore.islogIn ? <Scan /> : <LogIn/>} />
+
+    </Router>
+  )
 }
 
-export default App;
+export default inject('ordersStore')(observer(App));
