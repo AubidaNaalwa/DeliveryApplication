@@ -27,7 +27,7 @@ function Contact() {
             setSh({show: true, showing: true})
             return
         }
-        axios.post('http://localhost:8080/DashBoard/contact', {name:userName, email: userEmail, text: userText})
+        axios.post('/DashBoard/contact', {name:userName, email: userEmail, text: userText})
         setMessage('Message sent')
         emptyContainer()
         setSh({show: true, showing: true})
@@ -35,7 +35,7 @@ function Contact() {
 
 
     const getCompanyInfo = async function () {
-        const companyInfo = await axios.get('http://localhost:8080/companyInfo')
+        const companyInfo = await axios.get('/companyInfo')
         setCompany(companyInfo.data)
 
     }

@@ -8,7 +8,7 @@ function LogIn(props) {
     const [input, setInput] = useState({ userName: "", password: "" })
 
     const logIn = async function () {
-        const isLogIn = await axios.post('http://localhost:8080/logIn', input)
+        const isLogIn = await axios.post('/logIn', input)
         props.ordersStore.login(isLogIn.data.status, input);
     }
 
