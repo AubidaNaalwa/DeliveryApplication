@@ -5,17 +5,19 @@
     grid-template-columns: 1fr 1fr ;
 }
 
-.mappp{
-    box-shadow: 1px 1px 3px;
-    margin: 2%;
-    border-radius: 5px;
-}
-
 .onMap{
     display: grid;
     grid-template-rows: 1fr 1fr ;
 
 }
+
+#mapid{
+    height: 87px;
+    margin-top: 12px;
+    margin-left: 10px;
+
+}
+
 
 #nearOrders{
     margin: 2%;
@@ -81,9 +83,12 @@
 
 .orderNumber{
     font-weight: 30px;
-    margin: 2%;
+    /* margin: 2%; */
     font-size: 17px;
     color:#fa0808;
+    margin-left: 30px;
+    margin-top: 5px;
+
 
 }
 
@@ -150,10 +155,6 @@ img {
     align-content: center;
 }
 
-#mapid{
-    height: 96.5px;
-
-}
 
 
 .leaflet-container {
@@ -191,16 +192,18 @@ img {
 
 
   .orderInfo{
-    margin: 2%;
+    margin-left: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr ;
 
   }
 
   .total{
-        margin-top: 20px;
-        display: grid;
-        grid-template-columns: 2fr 1fr ;
+         /* margin-top: 1px; */
+         display: grid;
+         grid-template-columns: 2fr 1fr ;
+         margin: 2%;
+         /* margin-bottom: 100px; */
   }
 
   

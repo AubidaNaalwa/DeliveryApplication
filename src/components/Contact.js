@@ -35,7 +35,7 @@ function Contact() {
 
 
     const getCompanyInfo = async function () {
-        const companyInfo = await axios.get('/companyInfo')
+        const companyInfo = await axios.get('http://localhost:8080/companyInfo')
         setCompany(companyInfo.data)
 
     }
