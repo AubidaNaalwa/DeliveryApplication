@@ -39,6 +39,15 @@ router.post('/addorder', function (req, res) {
         })
 })
 
+router.post('/un', (req, res) => {
+    Order.updateMany({}, { received: false }, function (err, data) {
+        if (err)
+            res.send(err)
+        else
+            res.end()
+    })
+})
+
 router.post('/setReceived', (req, res) => {
     Order.findByIdAndUpdate(req.body.id, { received: true }, function (err, data) {
         if (err)
@@ -47,6 +56,7 @@ router.post('/setReceived', (req, res) => {
             res.end()
     })
 })
+
 
 router.post('/orders', (req, res) => {
 

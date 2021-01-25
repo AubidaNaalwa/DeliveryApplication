@@ -12,7 +12,7 @@ class Test extends Component {
     }
     this.handleScan = this.handleScan.bind(this)
   }
-  async handleScan(data) {
+   handleScan = async(data)=> {
     if (!data) {
       return
     }
@@ -21,7 +21,7 @@ class Test extends Component {
     })
 
   }
-  handleError(err) {
+  handleError =(err)=> {
     this.setState({
       result: "",
     })
