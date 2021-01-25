@@ -1,43 +1,57 @@
 import React, { Component } from 'react'
 import QrReader from 'react-qr-scanner'
-var QRCode = require('qrcode.react');
-export default class Test extends Component {
-  constructor(props){
+import { observer, inject } from 'mobx-react'
+import Card from './Card'
+
+class Test extends Component {
+  constructor(props) {
     super(props)
     this.state = {
       delay: 100,
-      result: 'No result',
+      result: '',
     }
- 
     this.handleScan = this.handleScan.bind(this)
   }
-  handleScan(data){
+  async handleScan(data) {
+    if (!data) {
+      return
+    }
     this.setState({
-      result: data,
+      result: await this.props.ordersStore.checkQrCode(data)
+    })
+
+  }
+  handleError(err) {
+    this.setState({
+      result: "",
     })
   }
-  handleError(err){
-    console.error(err)
+
+  setRecieved = (id) => {
+    this.props.ordersStore.setReceived(id)
+    this.setState({
+      result: "",
+    })
   }
-  render(){
+  render() {
     const previewStyle = {
-      height: 240,
-      width: 320,
+      height: 700,
+      width: 700,
     }
- 
-    return(
+
+    return (
       <div>
-        <QrReader
-          delay={this.state.delay}
-          style={previewStyle}
-          onError={this.handleError}
-          onScan={this.handleScan}
+        { !this.state.result ?
+          <QrReader
+            delay={this.state.delay}
+            style={previewStyle}
+            onError={this.handleError}
+            onScan={this.handleScan}
           />
-        <p>{this.state.result}</p>
-
-        <QRCode value="http://facebook.github.io/react/" />
-
+          : <Card order={this.state.result}  setRecieved={this.setRecieved}/>}
       </div>
     )
   }
 }
+
+export default inject("ordersStore")(observer(Test))

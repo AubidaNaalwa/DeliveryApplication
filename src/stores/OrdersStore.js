@@ -35,7 +35,8 @@ export default class OrdersStore {
             emptyLocalStorage: action,
             updateLocation: action,
             getNextOrder : action,
-            updateDistTime: action
+            updateDistTime: action,
+            checkQrCode:action
         })
     }
 
@@ -129,6 +130,18 @@ export default class OrdersStore {
                 maximumAge: 0
             }
         );
+    }
+
+    async checkQrCode(id){
+        await this.getOrders()
+        let orderQR
+        this.orders.filter(o => !o.received).forEach(order =>{
+          if(order._id === id){
+            orderQR = order
+            return
+          }
+        })
+        return orderQR
     }
 
       getNextOrder = async ()=>{
