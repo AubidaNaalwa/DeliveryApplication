@@ -71,11 +71,11 @@ function Orders(props) {
 
                             <div id='orders'>
 
-                                {search === "" && select === 'received'
+                            { select === 'received' 
                                     ? props.ordersStore.orders.filter(fd => fd[select]).map(o => <Order key={o._id} order={o} />)
-                                    : search === "" && select === 'not received' ?
+                                    :  select === 'not received' ?
                                         props.ordersStore.orders.filter(fd => !fd['received']).map(o => <Order key={o._id} order={o} />)
-                                        : search === ""
+                                        : (!select)
                                             ? props.ordersStore.orders.map(o => <Order key={o._id} order={o} />)
                                             : props.ordersStore.orders.filter(fd =>
                                                 fd[select]
