@@ -1,0 +1,61 @@
+{
+  "name": "delivery",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/user-event": "^12.6.0",
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "leaflet": "^1.7.1",
+    "leaflet-routing-machine": "^3.2.12",
+    "lrm-google": "^1.0.1",
+    "material-ui": "^0.20.2",
+    "mobx": "^6.0.4",
+    "mobx-react": "^7.0.6",
+    "mongoose": "^5.11.12",
+    "qrcode.react": "^1.0.1",
+    "react": "^17.0.1",
+    "react-barcode-reader": "0.0.2",
+    "react-circular-progressbar": "^2.0.3",
+    "react-dom": "^17.0.1",
+    "react-js-snackbar": "^1.0.4",
+    "react-leaflet": "^2.0.1",
+    "react-qr-scanner": "0.0.11",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.1",
+    "react-webcam-barcode-scanner": "0.0.2-rc2",
+    "reactjs-percentage-circle": "^1.0.0",
+    "web-vitals": "^0.2.4"
+  },
+  "engine": {
+    "node": "12.18.3"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

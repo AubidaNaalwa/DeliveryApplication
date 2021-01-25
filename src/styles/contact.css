@@ -1,0 +1,172 @@
+h3{
+    text-align: center;
+    text-align: center;
+    color: #3f3d24;
+    font-family: 'Trocchi', serif;
+    font-size: 30px;
+    font-weight: normal; 
+}
+
+textarea{
+    resize: none;
+}
+
+.subTitle { 
+    color: #f0b33b; 
+    font-weight: bold;
+    text-align: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.containerCompany{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.containerCompany > div{
+    box-shadow: 1px 1px 3px;
+    margin: 5%;
+    border-radius: 5px;
+    padding: 5%;
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.containerCompany > div:hover{
+   background-color:#f0b33b; 
+}
+
+
+.fa-fax{
+    font-size: 50px;
+    color:  rgb(10, 29, 24);
+    margin-left: auto;
+    margin-right: auto; 
+
+}
+.fa-fax:hover{
+    transform: scale(1.2);
+
+}
+.fa-map-signs{
+    font-size: 50px;
+    color:  rgb(10, 29, 24);
+    margin-left: auto;
+    margin-right: auto; 
+
+}
+.fa-map-signs:hover{
+    transform: rotate(30deg);
+
+}
+
+.fa-chrome{
+    font-size: 50px;
+    color:  rgb(10, 29, 24);
+    margin-left: auto;
+    margin-right: auto; 
+
+}
+
+
+.fa-chrome:hover{
+    transform: rotate(30deg); 
+
+}
+
+.fa-phone{
+    font-size: 50px;
+    color: rgb(10, 29, 24);
+    margin-left: auto;
+    margin-right: auto; 
+
+}
+
+.fa-phone:hover{
+    transform: scale(1.2);
+}
+
+.fa-envelope{
+    font-size: 50px;
+    color: rgb(10, 29, 24);
+    margin-left: auto;
+    margin-right: auto; 
+
+}
+
+.fa-envelope:hover{
+    transform: scale(1.2);
+}
+
+.text{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(14, 21, 83);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 10px;
+    width: 97%;
+}
+
+.compText{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 5%;
+    color: red;
+    font-weight: bold;
+}
+
+
+.contactUs{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+
+.contactUs > div{
+    box-shadow: 1px 1px 3px;
+    margin: 2%;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+.freeCase{
+    font-weight: bold;
+    margin: 2%;
+
+}
+
+.available{
+    font-weight: 30px;
+    margin: 2%;
+    font-size: 12px;
+    color:#7e7d73;
+
+}
+.btn{
+    cursor: pointer;
+    color: #ecf0f1;
+    background-color: rgb(148, 148, 150);
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+input{
+    background-color: rgb(255, 255, 255);
+}
+
+
+.companyLocation{
+    height: 270px;
+    width: 100%;
+}
+
+#msg{
+    height: 120px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
