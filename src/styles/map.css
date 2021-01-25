@@ -8,11 +8,10 @@
 .onMap{
     display: grid;
     grid-template-rows: 1fr 1fr ;
-
 }
 
 #mapid{
-    height: 87px;
+    height: 15%;
     margin-top: 12px;
     margin-left: 10px;
 
