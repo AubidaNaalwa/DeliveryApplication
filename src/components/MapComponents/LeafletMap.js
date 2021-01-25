@@ -4,7 +4,7 @@ import Routing from "./RoutingMachine";
 import { observer, inject } from 'mobx-react'
 class LeafletMap extends Component {
   state = {
-    zoom: 10,
+    zoom: 11,
     isMapInit: false
   };
 

@@ -27,7 +27,7 @@ function Contact() {
             setSh({show: true, showing: true})
             return
         }
-        axios.post('http://localhost:8080/DashBoard/contact', {name:userName, email: userEmail, text: userText})
+        axios.post('/DashBoard/contact', {name:userName, email: userEmail, text: userText})
         setMessage('Message sent')
         emptyContainer()
         setSh({show: true, showing: true})
@@ -35,7 +35,7 @@ function Contact() {
 
 
     const getCompanyInfo = async function () {
-        const companyInfo = await axios.get('http://localhost:8080/companyInfo')
+        const companyInfo = await axios.get('/companyInfo')
         setCompany(companyInfo.data)
 
     }
@@ -83,7 +83,7 @@ function Contact() {
 
             <div className='contactUs'>
                 <div className='companyMap'>
-                    <div className='freeCase'>GET A FREE CASE EVALUATION TODAY!</div>
+                    <div className='freeCase'>GET IN TOUCH!</div>
                     <div className='available'>AVAILABLE 24 HOURS A DAY!</div>
                     <input className='text' type='text' placeholder='Enter your name' value={userName} onChange={(e) => { setName(e.target.value) }} required />
                     <input className='text' type='text' placeholder='Enter a valid email address' value={userEmail} onChange={(e) => { setEmail(e.target.value) }} required />

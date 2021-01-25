@@ -63,8 +63,7 @@ class Test extends Component {
  
     return (
       <div>
-        <h3>Please scan the barcode</h3>
-         <h2 className='subTitle'>and get the card</h2>
+        <h3>Please scan the QR-code</h3>
         
         { !this.state.result ?
           <QrReader 

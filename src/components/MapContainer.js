@@ -85,7 +85,7 @@ function MapContainer(props) {
                             <div className='total'>
                                 <div>
                                     <div className='expDis'>Total Distance:  {Math.floor(props.ordersStore.distance)}km</div>
-                                    <div className='expTime'>Total Time Workday : {timeConvert(props.ordersStore.time * 60)}</div>
+                                    <div className='expTime'>Total Time : {timeConvert(props.ordersStore.time * 60)}</div>
                                 </div>
                                 <div> <img src='https://image.freepik.com/free-vector/delivery-courier-man-with-medical-protective-mask-his-face-holding-package-with-delivery-truck-delivery-during-quarantine-time_148087-145.jpg' /></div>
                             </div>
