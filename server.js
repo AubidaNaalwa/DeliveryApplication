@@ -7,7 +7,7 @@ const DashBoardAPI = require('./server/routes/DashBoard')
 const OrdersApi = require('./server/routes/OrdersApi')
 const mongoose = require('mongoose')
 
-mongoose.connect("mongodb+srv://AubidaNaalwa:Admin1234@cluster0.cvbqr.mongodb.net/DeliveryDB?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify: false }) 
+mongoose.connect(process.env.URI, {useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify: false }) 
 .then(() => console.log( 'Database Connected' ))
 .catch(err => console.log( err ));
 

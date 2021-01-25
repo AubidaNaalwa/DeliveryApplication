@@ -72,7 +72,7 @@ export default class OrdersStore {
     }
 
     async getOrders() {
-        let orders = await axios.post('http://localhost:8080/orders', this.currentUser)
+        let orders = await axios.post('/orders', this.currentUser)
         this.orders = orders.data.packages
         this.getLocations()
     }
@@ -91,7 +91,7 @@ export default class OrdersStore {
     }
 
     async setReceived(orderId) {
-        await axios.post('http://localhost:8080/setReceived', { id: orderId })
+        await axios.post('/setReceived', { id: orderId })
         this.getOrders()
     }
 
@@ -119,7 +119,7 @@ export default class OrdersStore {
             (position) =>{
                 this.lat = position.coords.latitude;
                 this.lan = position.coords.longitude;
-                axios.post('http://localhost:8080/DeliveryWorker/location', { ...this.currentUser, lat :this.lat, lan:this.lan })
+                axios.post('/DeliveryWorker/location', { ...this.currentUser, lat :this.lat, lan:this.lan })
             },
             function errorCallback(error) {
                
