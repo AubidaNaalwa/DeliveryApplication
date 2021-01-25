@@ -27,7 +27,7 @@ function Contact() {
             setSh({show: true, showing: true})
             return
         }
-        axios.post('/DashBoard/contact', {name:userName, email: userEmail, text: userText})
+        axios.post('http://localhost:8080/DashBoard/contact', {name:userName, email: userEmail, text: userText})
         setMessage('Message sent')
         emptyContainer()
         setSh({show: true, showing: true})

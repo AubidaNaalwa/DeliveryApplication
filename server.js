@@ -6,8 +6,8 @@ const DeliveryWorkerApi = require('./server/routes/DeliveryWorkerApi')
 const DashBoardAPI = require('./server/routes/DashBoard')
 const OrdersApi = require('./server/routes/OrdersApi')
 const mongoose = require('mongoose')
-
-mongoose.connect(process.env.URI, {useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify: false }) 
+const url = "mongodb+srv://AubidaNaalwa:Admin1234@cluster0.cvbqr.mongodb.net/DeliveryDB?retryWrites=true&w=majority"
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify: false }) 
 .then(() => console.log( 'Database Connected' ))
 .catch(err => console.log( err ));
 
