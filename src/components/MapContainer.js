@@ -36,21 +36,14 @@ function MapContainer(props) {
         <div>
             {props.ordersStore.locations.length > 0 ?
                 <div className='mapContainer'>
-
-
                     <div id="mapid">
-                        <LeafletMap locations={props.ordersStore.locations} />
+                        <LeafletMap locations={props.ordersStore.locations} nextOrder ={nextOrder} />
                     </div>
-
-
                     <div className='onMap'>
-
                         <div id="nearOrders">
-
                             <div className='approved'>
                                 <Clock />
                             </div>
-
                             <div className='near'>
                                 <div>
                                     <div className='ordersLeft'>ORDERS LEFT</div>
@@ -61,13 +54,8 @@ function MapContainer(props) {
                                     <div className='orderNum'>{props.ordersStore.totalReceived}</div>
                                 </div>
                             </div>
-
-
                         </div>
-
-
                         <div className='expected'>
-
                             <div className='orderInfo'>
                                 <table>
                                     <tr>
@@ -94,29 +82,17 @@ function MapContainer(props) {
                                 </table>
 
                             </div>
-
                             <div className='total'>
                                 <div>
                                     <div className='expDis'>Total Distance:  {Math.floor(props.ordersStore.distance)}km</div>
                                     <div className='expTime'>Total Time Workday : {timeConvert(props.ordersStore.time * 60)}</div>
                                 </div>
                                 <div> <img src='https://image.freepik.com/free-vector/delivery-courier-man-with-medical-protective-mask-his-face-holding-package-with-delivery-truck-delivery-during-quarantine-time_148087-145.jpg' /></div>
-
                             </div>
-
-
                         </div>
-
-
-
-
                     </div>
-
                 </div> : null}
-
-
         </div>
-
     )
 
 }

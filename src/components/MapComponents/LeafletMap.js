@@ -31,7 +31,7 @@ class LeafletMap extends Component {
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
         />
-        {this.state.isMapInit && <Routing map={this.map} locations={this.props.locations} updateDistTime = {this.updateDistanceAndTime} />}
+        {this.state.isMapInit && <Routing map={this.map} locations={this.props.locations} updateDistTime = {this.updateDistanceAndTime} nextOrder ={this.props.nextOrder} />}
       </Map>
     );
   }

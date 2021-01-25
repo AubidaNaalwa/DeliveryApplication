@@ -10,12 +10,12 @@ class Routing extends MapLayer {
     const { map } = this.props;
     const myIcon = new L.Icon({
       iconUrl: "https://img.icons8.com/plasticine/100/000000/order-on-the-way.png",
-      iconSize:     [60, 60]// size of the icon
-  })
+      iconSize: [60, 60]
+    })
 
     const orderIcon = new L.Icon({
       iconUrl: "https://img.icons8.com/color/100/000000/order-delivered.png",
-      iconSize:     [60, 60]// size of the icon
+      iconSize: [60, 60]
     })
 
     let leafletElement = L.Routing.control({
@@ -23,10 +23,11 @@ class Routing extends MapLayer {
       fitSelectedRoutes: true,
       draggableWaypoints: false,
       routeWhileDragging: false,
-      createMarker: function (i, wp, nWps) {
-        if (i === 0 ) {
+      createMarker:  (i, wp, nWps) =>{
+
+      if (i === 0) {
           return L.marker(wp.latLng, {
-            icon: myIcon 
+            icon: myIcon
           }).bindPopup("I am here Working ... ");
         } else {
           return L.marker(wp.latLng, {
@@ -37,12 +38,11 @@ class Routing extends MapLayer {
       addWaypoints: false
     }).addTo(map.leafletElement);
 
-    leafletElement.on('routesfound', (e)=> {
+    leafletElement.on('routesfound', (e) => {
       var routes = e.routes;
       var summary = routes[0].summary;
       this.props.updateDistTime(summary.totalDistance / 1000, summary.totalDistance / 80000)
-   });
-   
+    });
     return leafletElement.getPlan();
   }
 }

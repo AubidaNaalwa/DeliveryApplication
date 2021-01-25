@@ -8,13 +8,16 @@ export default class OrdersStore {
         this.currentUser = {
             
         }
+   
         this.islogIn = false
         this.locations = []
         this.lat = 32.073582
         this.lan = 34.788052
         this.distance = 0
         this.time = 0
+        this.nextOrder ={}
         makeObservable(this, {
+            nextOrder:observable,
             distance: observable,
             time: observable,
             lat: observable,
@@ -160,7 +163,6 @@ export default class OrdersStore {
                 return
             }
         })
-        console.log(nextOrder)
         return nextOrder
     }
 }
