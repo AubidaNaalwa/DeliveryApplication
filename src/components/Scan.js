@@ -2,13 +2,19 @@ import React, { Component } from 'react'
 import QrReader from 'react-qr-scanner'
 import { observer, inject } from 'mobx-react'
 import Card from './Card'
+import ReactSnackBar from "react-js-snackbar";
 
 class Test extends Component {
+
   constructor(props) {
     super(props)
     this.state = {
       delay: 100,
       result: '',
+      show: false,
+      showig: false,
+      message: false
+
     }
     this.handleScan = this.handleScan.bind(this)
   }
@@ -18,12 +24,16 @@ class Test extends Component {
       return
     }
    const order =  await this.props.ordersStore.checkQrCode(data)
+   setTimeout(() => {
+    this.setState({show: false, showing: false})
+  }, 2000);
+
    if(!order){
-     alert("order  is not your pakage")
+     this.setState({message: "This order is not yours", show: true, showing: true})
     return
    }
     if(order.received){
-      alert("order  has been recieved ")
+      this.setState({message: "The order has been recieved", show: true, showing: true})
       return
     }
     this.setState({
@@ -44,21 +54,25 @@ class Test extends Component {
     })
   }
   render() {
-    const previewStyle = {
-      height: 700,
-      width: 700,
-    }
-
+ 
     return (
       <div>
+        <h3>Please scan the barcode</h3>
+         <h2 className='subTitle'>and get the card</h2>
+        
         { !this.state.result ?
-          <QrReader
+          <QrReader 
             delay={this.state.delay}
-            style={previewStyle}
             onError={this.handleError}
             onScan={this.handleScan}
+            
           />
+
           : <Card order={this.state.result}  setRecieved={this.setRecieved}/>}
+           <h2 className='subTitle2'>Thank You!</h2>
+           <ReactSnackBar Icon={<span>🦄</span>} Show={this.state.show}>
+                            {this.state.message}
+            </ReactSnackBar>
       </div>
     )
   }

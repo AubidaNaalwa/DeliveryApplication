@@ -1,21 +1,27 @@
 
 .mapContainer{
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-}
-
-.onMap{
+    margin: 40px;
     display: grid;
     grid-template-rows: 1fr 1fr ;
 }
 
+.onMap{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    margin-top: 150px;
+}
+
 #mapid{
-    height: 15%;
-    margin-top: 12px;
-    margin-left: 10px;
+    height: 100px;
+    /* margin-top: 12px;
+    margin-left: 10px; */
 
 }
+table, th, td {
+    border: 1px solid black;
+}
+
+
 
 
 #nearOrders{
@@ -25,6 +31,12 @@
     grid-template-columns: 1fr 1fr ;
     grid-gap: 10px;
 
+
+}
+
+.expected{
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
 
 }
 
@@ -191,21 +203,24 @@ img {
 
 
   .orderInfo{
-    margin-left: 20px;
+    margin: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr ;
 
   }
 
   .total{
-         /* margin-top: 1px; */
+         margin-top: 1px;
          display: grid;
-         grid-template-columns: 2fr 1fr ;
-         margin: 2%;
-         /* margin-bottom: 100px; */
+         grid-template-columns: 3fr 1fr ;
+         margin: 2%; 
+         margin-bottom: 100px;
   }
 
   
+
+
+
 
   element.style {
     position: relative;

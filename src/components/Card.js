@@ -31,10 +31,20 @@ export default function MediaCard(props) {
             {props.order.name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {props.order.area}
+            From: {props.order.area}
+          </Typography>
+          <Typography variant="body2" component="p">
+            Phone Number: {props.order.phoneNumber}
+          </Typography>
+          <Typography variant="body2" component="p">
+            ID: {props.order.id}
+          </Typography>
+          <Typography variant="body2" component="p">
+            Order Id: {props.order._id}
           </Typography>
         </CardContent>
       </CardActionArea>
+
       <CardActions>
         <Button size="small" color="primary" onClick ={() => {props.setRecieved(props.order._id)}}>
           set Deliverd
