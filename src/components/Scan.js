@@ -29,11 +29,11 @@ class Test extends Component {
   }, 2000);
 
    if(!order){
-     this.setState({message: "This order is not yours", show: true, showing: true})
+     this.setState({message: "This package assign to another driver!", show: true, showing: true})
     return
    }
     if(order.received){
-      this.setState({message: "The order has been recieved", show: true, showing: true})
+      this.setState({message: "The order is already recieved", show: true, showing: true})
       return
     }
     this.setState({
@@ -48,6 +48,12 @@ class Test extends Component {
   }
 
   setRecieved = (id) => {
+    setTimeout(() => {
+      this.setState({show: false, showing: false})
+    }, 2000);
+
+    this.setState({message: "The order delivered!", show: true, showing: true})
+  
     this.props.ordersStore.setReceived(id)
     this.setState({
       result: "",

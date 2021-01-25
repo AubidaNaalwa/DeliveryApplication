@@ -18,6 +18,7 @@ const useStyles = makeStyles({
 });
 
 export default function MediaCard(props) {
+
   const classes = useStyles();
   return (
     <Card className={classes.root}>
@@ -46,10 +47,11 @@ export default function MediaCard(props) {
       </CardActionArea>
 
       <CardActions>
-        <Button size="small" color="primary" onClick ={() => {props.setRecieved(props.order._id)}}>
+        <Button size="small" color="primary" onClick={() => { props.setRecieved(props.order._id) }}>
           set Deliverd
-        </Button>
+        </Button>        
       </CardActions>
+
     </Card>
   );
 }
