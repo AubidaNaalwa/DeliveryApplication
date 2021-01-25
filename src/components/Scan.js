@@ -14,10 +14,20 @@ class Test extends Component {
   }
    handleScan = async(data)=> {
     if (!data) {
+      
+      return
+    }
+   const order =  await this.props.ordersStore.checkQrCode(data)
+   if(!order){
+     alert("order  is not your pakage")
+    return
+   }
+    if(order.received){
+      alert("order  has been recieved ")
       return
     }
     this.setState({
-      result: await this.props.ordersStore.checkQrCode(data)
+      result: order
     })
 
   }

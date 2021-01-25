@@ -135,7 +135,7 @@ export default class OrdersStore {
     async checkQrCode(id){
         await this.getOrders()
         let orderQR
-        this.orders.filter(o => !o.received).forEach(order =>{
+        this.orders.forEach(order =>{
           if(order._id === id){
             orderQR = order
             return
