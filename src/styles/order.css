@@ -17,9 +17,7 @@
 #orders{
     height: 100% !important;
   }
-#orderTable{
-    height: 40% !important;
-  }
+
 
 #check{
     cursor: pointer;
