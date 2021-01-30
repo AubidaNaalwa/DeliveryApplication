@@ -3,7 +3,7 @@
 # Delivery Application
 This platform will give the opportunity to shop owners to add their deliveries to our website and allow customers to get their products delivered to them in the fastest and most efficient route .
 
-## <p align="center"><img src="https://res.cloudinary.com/dnrxmm7a0/image/upload/v1600169417/cherry/cc1_c6lmsc.jpg" width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/du17udtpd/image/upload/v1612015530/Screen_Shot_2021-01-30_at_4.04.50_PM_hpgiiy.png" width="300"> </p>
 
 ## [Try The App](https://delivery-worker.herokuapp.com/)
 for Dummy  use insert :
