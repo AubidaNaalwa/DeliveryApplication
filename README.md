@@ -1,6 +1,6 @@
 # <p align="center"><img src="https://i.pinimg.com/474x/36/b6/fa/36b6fa8541cd449f17a5e4a5cd9d9db7.jpg" width="300"> </p>
 
-# A Social Media For Food
+# Delivery Application
 
 This App exist to connect between 👩‍🍳cookers and 🍴hungry people.
 A user can make a Cook/Eat Post and put init all his preferences.
