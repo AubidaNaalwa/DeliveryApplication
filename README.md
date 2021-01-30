@@ -5,7 +5,7 @@ This platform will give the opportunity to shop owners to add their deliveries t
 
 ## <p align="center"><img src="https://res.cloudinary.com/dnrxmm7a0/image/upload/v1600169417/cherry/cc1_c6lmsc.jpg" width="300"> </p>
 
-## [Try The App](https://cherrycarey.herokuapp.com/)
+## [Try The App](https://delivery-worker.herokuapp.com/)
 
 ---
 
