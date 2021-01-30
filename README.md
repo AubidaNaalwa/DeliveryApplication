@@ -39,10 +39,10 @@ npm run-script develop
 
 ### Tools and Libraries
 
-- Client Side - React with Mobx, Material UI
-- Server - NodeJs With Express, NodeMailer
-- DataBase - MySQL on AWS
-- External Services- Google Maps API, Facebook auth, PayPal payment API
+- Client Side - React with Mobx, Material UI, axios
+- Server - NodeJs With Express, NodeMailer, mongoose
+- DataBase - MongoDb on Atlas
+- External Services- Leaflet API
 
 ---
 ### System design architecture (rough sketch)
@@ -53,9 +53,9 @@ npm run-script develop
 
 ### 🚀Future Features
 
-- Adding Reviews
-- Rating Options (both cookers and eaters)
-- Implement Chat
+- Develop our Costumer and Shop owners version of the platform 
+- Assigning orders automatically with close locations that enables the system to draw the routes with less distance and time,  which means more profit and less cost. 
+- Improve our push notification system
 
 ---
 
