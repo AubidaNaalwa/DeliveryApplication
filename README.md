@@ -47,7 +47,7 @@ npm run-script develop
 ---
 ### System design architecture (rough sketch)
 
-## <p align="center"><img src="https://res.cloudinary.com/dnrxmm7a0/image/upload/v1608453180/cherry/system_design_fhin4n.jpg" width="400"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/du17udtpd/image/upload/v1612014957/Arch_iorqoz.png" width="400"> </p>
 
 ---
 
