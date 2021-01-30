@@ -1,4 +1,4 @@
-# <p align="center"><img src="https://res.cloudinary.com/dnrxmm7a0/image/upload/v1600169600/cherry/cclogo_gwiyj9.jpg" width="300"> </p>
+# <p align="center"><img src="https://i.pinimg.com/474x/36/b6/fa/36b6fa8541cd449f17a5e4a5cd9d9db7.jpg" width="300"> </p>
 
 # A Social Media For Food
 
