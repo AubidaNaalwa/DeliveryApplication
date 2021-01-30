@@ -1,10 +1,7 @@
 # <p align="center"><img src="https://i.pinimg.com/474x/36/b6/fa/36b6fa8541cd449f17a5e4a5cd9d9db7.jpg" width="300"> </p>
 
 # Delivery Application
-
-This App exist to connect between 👩‍🍳cookers and 🍴hungry people.
-A user can make a Cook/Eat Post and put init all his preferences.
-All posts displayed on a map and users can make reservations by clicking the icons.
+This platform will give the opportunity to shop owners to add their deliveries to our website and allow customers to get their products delivered to them in the fastest and most efficient route .
 
 ## <p align="center"><img src="https://res.cloudinary.com/dnrxmm7a0/image/upload/v1600169417/cherry/cc1_c6lmsc.jpg" width="300"> </p>
 
