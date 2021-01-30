@@ -61,5 +61,9 @@ npm run-script develop
 
 ### Screenshots
 
-## <p align="center"><img src="https://res.cloudinary.com/dnrxmm7a0/image/upload/v1600235047/projects/project3_w6vipq.jpg" width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/du17udtpd/image/upload/v1612015114/2_mgkmjr.png" width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/du17udtpd/image/upload/v1612015108/4_ftbpap.png" width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/du17udtpd/image/upload/v1612015108/1_lggfng.png" width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/du17udtpd/image/upload/v1612015106/3_tt5jca.png" width="300"> </p>
+## <p align="center"><img src="https://res.cloudinary.com/du17udtpd/image/upload/v1612015105/5_gcfpqh.png" width="300"> </p>
 
